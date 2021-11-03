@@ -28,6 +28,15 @@ class Pipeline():
         self.con.commit()
   
   '''
+  This function is used to scroll down the website
+  '''
+  def scrollDown(self, browser, scrollTimes):
+    body = browser.find_element_by_tag_name('body')
+    while scrollTimess >=0:
+        body.send_keys(Keys.PAGE_DOWN)
+        scrollTimes -= 1
+    return browser
+  '''
   This function process each block of data and inserts them into the table in the database
   '''
     def processItem(self, item):
@@ -42,7 +51,7 @@ class Pipeline():
     def extract(self, link):
         browser = webdriver.Chrome('chromedriver',chrome_options=chrome_options)
         browser.get(link)
-        r = scrollDown(browser, 125)
+        r = self.scrollDown(browser, 125)
         # r = requests.get(link)
         # self.site = BS(r.content, 'html.parser')
         self.site = BS(r.page_source, 'html.parser')
