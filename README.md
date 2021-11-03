@@ -5,8 +5,8 @@ Each news source has a rating based on agree-disagree votes that decides whether
 
 **EXTRACT:**
 
-<img src = "https://miro.medium.com/max/1200/1*xn6zhVel2AjaA7dbGgf3rg.png"  width = "100">
-![BeautifulSoup](https://cdn.analyticsvidhya.com/wp-content/uploads/2021/04/56856232112.png)
+<img src = "https://miro.medium.com/max/1200/1*xn6zhVel2AjaA7dbGgf3rg.png"  width = "400">
+<img src = "https://cdn.analyticsvidhya.com/wp-content/uploads/2021/04/56856232112.png">
 
 To extract data, I used Selenium that scrapes the HTML elements on the website of media-bias. However, only popular new channels reviews were present. Upon scrolling more would appear. This is where Beautiful Soup fails and Selenium helps to scroll down till the end using the Chrome webdriver. After scrolling till the end, and obtained the HTML contents, we scrap the _<body>_ tags and then scrap out the _<tr>_ tags that contain data for each media Bias.
 
