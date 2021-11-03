@@ -72,8 +72,3 @@ class Pipeline():
             data = {'News': n, 'link': l, 'bias': '|'.join(b), 'agree': a, 'disagree': d, 'ratio': r}
             self.processItem(data)
         self.con.close()
-
-pipe = Pipeline()
-pipe.extract('https://www.allsides.com/media-bias/media-bias-ratings?field_featured_bias_rating_value=All&field_news_source_type_tid%5B2%5D=2&field_news_bias_nid_1%5B1%5D=1&field_news_bias_nid_1%5B2%5D=2&field_news_bias_nid_1%5B3%5D=3&title=')
-pipe.transform()
-pipe.load()
