@@ -1,7 +1,7 @@
 import requests
 import sqlite3
 from datetime import date
-import pipeline
+import Pipeline
 
 # !pip install selenium
 # !apt-get update 
@@ -22,6 +22,9 @@ from pyvirtualdisplay import Display
 #!pip3 install requests requests selectorlib
 #!pip install beautifulsoup4
 from bs4 import BeautifulSoup as BS
+
+
+
 news = []
 newslink = []
 bias = []
@@ -29,9 +32,7 @@ agree = []
 disagree = []
 ratio = []
 
-def scrollDown(browser, numberOfScrollDowns):
-    body = browser.find_element_by_tag_name("body")
-    while numberOfScrollDowns >=0:
-        body.send_keys(Keys.PAGE_DOWN)
-        numberOfScrollDowns -= 1
-    return browser
+pipe = Pipeline()
+pipe.extract('https://www.allsides.com/media-bias/media-bias-ratings?field_featured_bias_rating_value=All&field_news_source_type_tid%5B2%5D=2&field_news_bias_nid_1%5B1%5D=1&field_news_bias_nid_1%5B2%5D=2&field_news_bias_nid_1%5B3%5D=3&title=')
+pipe.transform()
+pipe.load()
