@@ -15,6 +15,6 @@ After extraction of the data, I transform the it into valuable information like 
 
 **LOAD:**
 
-<img src = "https://media.charlesleifer.com/blog/photos/sqlite-and-python.png" width = "350">
+<img src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.datasciencearth.com%2Fpython-sqlite%2F&psig=AOvVaw1mLF6NlnWaDam4cErx308K&ust=1636002590894000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLiL79-2-_MCFQAAAAAdAAAAABAJ" width = "350">
   
 After transformating the extracted data, I load it into the SQL database from which I will be pulling data as per requirement for visualizations.
